@@ -1,0 +1,10 @@
+.table tbody .username > td {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.table tbody .todo > td {
+  color: #3c434a;
+  padding-left: 1rem;
+}
+
+/*# sourceMappingURL=dist.css.map */
