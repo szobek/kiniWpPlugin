@@ -2,7 +2,10 @@
 
 class Functions
 {
-
+    public $arr = [
+        "content"=>"okok",
+        "display"=>"none"
+    ];
     function listUsers(){
         global $wpdb;
 
@@ -38,13 +41,15 @@ class Functions
         global $wpdb;
         $sql = "SELECT content,id FROM todo WHERE id=".$id;
         $results = $wpdb->get_row( $sql, OBJECT );
-        echo $results->content;
+
+        $this->arr["display"] = "block";
+        $this->arr["content"] = $results->content;
     }
     function crudNew(){
         echo "új";
     }
-    function crudModifyFunction($id){
+    function crudModifyFunction($id,$content){
         global $wpdb;
-        $wpdb->update("todo",["content"=>"aa"],["id"=>$id ]);
+        $results  = $wpdb->update("todo",["content"=>$content],["id"=>$id ]);
     }
 }

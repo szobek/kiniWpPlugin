@@ -2,6 +2,13 @@
   text-decoration: underline;
   font-weight: bold;
 }
+.table tbody button {
+  background-color: #a3ff8f;
+  border: none;
+  border-radius: 2rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
 .table tbody .todo > td {
   color: #3c434a;
   padding-left: 1rem;
